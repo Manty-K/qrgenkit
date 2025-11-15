@@ -1,16 +1,21 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+from pathlib import Path
+from qr.qr_config import QrConfig
+from qr.qr_generator import QRGenerator
+from generators.range_generator import RangeGenerator
+from generators.list_generator import ListGenerator
+from generators.single_generator import SingleGenerator
 
 
-# Press the green button in the gutter to run the script.
+def main():
+    config = QrConfig( box_size=10, border=1, fill_color="blue", back_color="transparent")
+    qr_generator = QRGenerator(config=config)
+    range_generator = RangeGenerator(input_data={'start':1, 'end':3}, generator=qr_generator, output_dir=Path('outputs/range'))
+    list_generator = ListGenerator(input_data=['Item1', 'Item2', 'Item3'], generator=qr_generator, output_dir='outputs/list')
+    single_generator = SingleGenerator(input_data='Manthan', generator=qr_generator, output_dir='outputs/single')
+    range_generator.generate()
+    list_generator.generate()
+    single_generator.generate()
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    main()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
