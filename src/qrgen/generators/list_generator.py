@@ -1,5 +1,5 @@
-from generators.base_generator import BaseGenerator
-from qr.qr_generator import QRGenerator
+from src.qrgen.generators.base_generator import BaseGenerator
+from src.qrgen.qr.qr_generator import QRGenerator
 
 class ListGenerator(BaseGenerator):
     def __init__(self, input_data: list[str], generator: QRGenerator, output_dir: str):

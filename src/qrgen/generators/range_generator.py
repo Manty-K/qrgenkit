@@ -1,5 +1,5 @@
-from generators.base_generator import BaseGenerator
-from qr.qr_generator import QRGenerator
+from src.qrgen.generators.base_generator import BaseGenerator
+from src.qrgen.qr.qr_generator import QRGenerator
 from pathlib import Path
 
 class RangeGenerator(BaseGenerator):

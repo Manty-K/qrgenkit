@@ -1,9 +1,6 @@
 from pathlib import Path
-from qr.qr_config import QrConfig
-from qr.qr_generator import QRGenerator
-from generators.range_generator import RangeGenerator
-from generators.list_generator import ListGenerator
-from generators.single_generator import SingleGenerator
+
+from src.qrgen import  QRGenerator, QrConfig, RangeGenerator, ListGenerator,SingleGenerator
 
 
 def main():

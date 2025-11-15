@@ -1,0 +1,32 @@
+# toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qrgen"
+version = "0.1.0"
+description = "QR code generator"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+license = { text = "MIT" }
+dependencies = [
+  # add your runtime deps here, e.g. "qrcode[pil]>=7.3"
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+# optional: create a console entry point that calls qrgen.main:main
+[project.scripts]
+qrgen = "qrgen.main:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
