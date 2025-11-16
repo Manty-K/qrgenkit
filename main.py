@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from src.qrgen import  QRGenerator, QrConfig, RangeGenerator, ListGenerator,SingleGenerator
+from src.qrgenkit import  QRGenerator, QrConfig, RangeGenerator, ListGenerator,SingleGenerator
 
 
 def main():

@@ -1,4 +1,4 @@
-from src.qrgen import QrConfig,QRGenerator, RangeGenerator
+from src.qrgenkit import QrConfig,QRGenerator, RangeGenerator
 
 
 config = QrConfig(box_size=10, border=1, fill_color="blue", back_color="transparent")
