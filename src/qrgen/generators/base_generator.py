@@ -3,9 +3,10 @@ from src.qrgen.qr.qr_generator import QRGenerator
 from pathlib import Path
 
 class BaseGenerator(ABC):
-    def __init__(self, generator:QRGenerator, output_dir: str|Path):
+    def __init__(self, generator:QRGenerator, output_dir: str|Path, progress_callback=None):
         self.generator:QRGenerator = generator
         self.output_dir:Path = Path(output_dir)
+        self.progress_callback = progress_callback
 
     def generate(self):
         self.output_dir.mkdir(parents=True, exist_ok=True)
