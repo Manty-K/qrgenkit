@@ -1,5 +1,5 @@
 import qrcode
-from src.qrgen.qr.qr_config import QrConfig
+from .qr_config import QrConfig
 
 class QRGenerator:
     def __init__(self, config: QrConfig):

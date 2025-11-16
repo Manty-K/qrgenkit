@@ -1,9 +1,9 @@
-from src.qrgen.generators.base_generator import BaseGenerator
-from src.qrgen.qr.qr_generator import QRGenerator
+from .base_generator import BaseGenerator
+
 from pathlib import Path
 
 class RangeGenerator(BaseGenerator):
-    def __init__(self, input_data: dict, generator: QRGenerator, output_dir: str | Path, progress_callback=None):
+    def __init__(self, input_data: dict, generator, output_dir: str | Path, progress_callback=None):
         super().__init__(generator,output_dir,progress_callback)
         self.prefix = input_data.get('prefix','')
         self.suffix = input_data.get('suffix','')

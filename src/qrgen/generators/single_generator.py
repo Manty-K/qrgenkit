@@ -1,4 +1,4 @@
-from src.qrgen.generators.base_generator import BaseGenerator
+from .base_generator import BaseGenerator
 from pathlib import Path
 
 class SingleGenerator(BaseGenerator):
